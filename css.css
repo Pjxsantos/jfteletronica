@@ -43784,11 +43784,17 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-footer .u-container-layout-2 {
-  padding: 20px;
+  padding: 20px 11px;
 }
 
 .u-footer .u-text-2 {
-  margin: 0;
+  margin: 0 0 0 9px;
+}
+
+.u-footer .u-btn-1 {
+  background-image: none;
+  font-weight: 700;
+  padding: 0;
 }
 
 .u-footer .u-layout-cell-3 {
@@ -43803,6 +43809,12 @@ a.u-link.u-text-hover-grey-90:hover {
   margin: 0;
 }
 
+.u-footer .u-btn-2 {
+  background-image: none;
+  font-weight: 700;
+  padding: 0;
+}
+
 .u-footer .u-layout-cell-4 {
   min-height: 91px;
 }
@@ -43812,6 +43824,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-footer .u-text-4 {
+  text-transform: uppercase;
   margin: 0;
 }
 @media (max-width: 1199px) {
@@ -43840,6 +43853,8 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-footer .u-text-2 {
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .u-footer .u-layout-cell-3 {
@@ -43912,6 +43927,192 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 
+ /*begin-variables custom-site-css*/.wppButton {
+  position:fixed;
+  bottom:40px;
+  right:40px;
+  width:60px;
+  height:60px;
+  background:#1cd741 url(https://www.mirak.com.br/assets/icons/wpp.svg) 50% no-repeat;
+  background-size:36px;
+  display:block;
+  z-index:999;
+  border-radius:100%;
+  cursor:pointer;
+  -webkit-animation:pulse 2s infinite;
+  animation:pulse 2s infinite
+}
+.wppButton:before {
+  content:"1";
+  position:absolute;
+  background-color:red;
+  height:15px;
+  width:15px;
+  font-size:12px;
+  color:#fff;
+  border-radius:50%;
+  z-index:2;
+  line-height:16px;
+  top:10px;
+  left:10px;
+  text-align:center
+}
+.wppButton.hide {
+  -webkit-animation:none;
+  animation:none;
+  background:0 0
+}
+.wppButton.hide:before {
+  display:none
+}
+.wppButton .container {
+  display:none;
+  right:0;
+  bottom:0;
+  height:auto;
+  width:270px;
+  background:0 0;
+  padding:8px 0;
+  z-index:999!important;
+  margin:0;
+  text-align:center;
+  list-style:none;
+  line-height:30px;
+  position:absolute;
+  border-radius:10px
+}
+.wppButton .container.active {
+  display:block;
+  background:url(https://www.mirak.com.br/assets/backg-wpp.webp) 50% no-repeat;
+  background-size:cover
+}
+.wppButton .container p {
+  padding:0 10px;
+  margin:5px auto
+}
+.wppButton .container p.title {
+  background:#755e4e;
+  color:#fff;
+  font-weight:400;
+  font-size:16px;
+  line-height:45px;
+  margin-top:-10px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px
+}
+.wppButton .container p.text {
+  font-size:15px;
+  color:#755e4e;
+  padding:10px 0
+}
+.wppButton .container p span {
+  background:#755e4e;
+  color:#fff;
+  width:30px;
+  height:30px;
+  border-radius:100%;
+  font-size:14px;
+  position:absolute;
+  right:-5%;
+  bottom:95%;
+  line-height:28px
+}
+.wppButton .container .content {
+  list-style:none;
+  padding:0;
+  margin:5px 0
+}
+.wppButton .container .content li {
+  text-align:left;
+  margin:13px 15px 0;
+  background:#fff;
+  -webkit-box-shadow:1px 5px 5px rgba(98,98,98,.3803921569);
+  box-shadow:1px 5px 5px rgba(98,98,98,.3803921569);
+  border-radius:10px;
+  padding:8px 10px;
+  height:52px
+}
+.wppButton .container .content li a {
+  color:#755e4e;
+  display:-webkit-inline-box;
+  display:-ms-inline-flexbox;
+  display:inline-flex;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  -webkit-box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+  width:100%
+}
+.wppButton .container .content li a:hover {
+  color:#5f4c3f
+}
+.wppButton .container .content li a:after {
+  content:"";
+  background:url(https://www.mirak.com.br/assets/icons/arrow.svg) 50% no-repeat;
+  width:14px;
+  height:18px;
+  display:inline-block;
+  background-size:contain;
+  margin:0 5px;
+  vertical-align:-1px;
+  -webkit-filter:brightness(.5);
+  filter:brightness(.5);
+  -webkit-transform:rotate(90deg);
+  transform:rotate(90deg)
+}
+.wppButton .container .content li a img {
+  width:35px;
+  height:auto;
+  border-radius:100%
+}
+@media screen and (max-width:764px) {
+  .wppButton {
+    right:10px;
+    bottom:10px
+  }
+  .wppButton .wppButton .container {
+    bottom:0
+  }
+  .wppButton .wppButton {
+    bottom:10px;
+    right:10px
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow:0 0 0 0 rgba(37,211,102,.4);
+    box-shadow:0 0 0 0 rgba(37,211,102,.4)
+  }
+  70% {
+    -webkit-box-shadow:0 0 0 30px rgba(37,211,102,0);
+    box-shadow:0 0 0 30px rgba(37,211,102,0)
+  }
+  100% {
+    -webkit-box-shadow:0 0 0 0 rgba(37,211,102,0);
+    box-shadow:0 0 0 0 rgba(37,211,102,0)
+  }
+}
+@media screen and (max-width:991px) {
+  .newsletter-area {
+    padding:45px 0
+  }
+  .newsletter-area .box {
+    flex-direction:column;
+    gap:20px
+  }
+  .newsletter-area .box>div {
+    width:100%;
+    padding:0 15px;
+    text-align:center
+  }
+  .newsletter-area .box>div.left * {
+    width:100%;
+    max-width:100%;
+    display:block
+  }
+}/*end-variables custom-site-css*/
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
